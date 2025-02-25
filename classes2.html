@@ -10,6 +10,9 @@ function Person() {
             this.firstName = "unknown";
             this.lastName = "unknown";
             //Create a method
+            this.getFullName = function() {
+                return this.firstName + " " + this.lastName;
+            };
             
         };
 

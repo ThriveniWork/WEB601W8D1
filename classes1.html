@@ -6,20 +6,27 @@
 
 <script> 
 
-function Person() {
-    this.firstName = "unknown";
-    this.lastName = "unknown";
-}
+function Person(FirstName, LastName,age) {
+    //Parameters or properties as constructor
+    this.firstName = FirstName || "unknown";
+    this.lastName = LastName || "unknown";
+    this.age = Age || 25; //default value
+    //Method
+    this.getFullName = function() {
+        return this.firstName + " " + this.lastName;
+    }
+};
 
 //Create object 1
+var person1 = new Person("James", "Bond", 40);
+alert(person1.getFullName());
 
-            
-alert();
+
+alert(person1.firstName + " " + person1.lastName);
 
 //Create object 2
-
-            
-alert();
+var person2 = new Person("Wonder","Women");            
+alert(person2.getFullName());
 
 </script>
 
